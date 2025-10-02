@@ -338,3 +338,38 @@ a {
     font-weight: 400;
     font-family: 'Poppins';
 }
+.days-container {
+    display: flex;
+    flex-wrap: wrap;          /* Wrap to next line if needed */
+    justify-content: space-between; /* Evenly space cards */
+    gap: 20px;                /* Optional, extra spacing */
+    max-width: 1300px;        /* Matches gallery width */
+    margin: 0 auto;           /* Center the container */
+    padding: 0 20px;          /* Avoid touching edges */
+    box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+    .day-card {
+        flex: 1 1 calc(33.33% - 20px); /* 3 cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .day-card {
+        flex: 1 1 calc(50% - 20px); /* 2 cards per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .day-card {
+        flex: 1 1 100%; /* 1 card per row */
+    }
+}
+.day-card {
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex: 1 1 180px;          /* Minimum width for responsiveness */
+    box-sizing: border-box;
+}
