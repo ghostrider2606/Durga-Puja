@@ -1,5 +1,5 @@
 # Durga-Puja
-Just a simple Halloween website design using HTML, CSS and JS.
+Just a simple Durga Puja website design using HTML, CSS and JS.
 
 ## Watch the Live [Demo](https://ghostrider2606.github.io/Durga-Puja/)
 
