@@ -1,8 +1,11 @@
 /* --- Global Styles & Variables --- */
 :root {
-    --secondary-color: #CAA906; /* Festive Gold */
-    --primary-color: #CA2325; /* Sindoor Red */
-    --background-color: #FFF8E1; /* Creamy White */
+    --secondary-color: #CAA906;
+    /* Festive Gold */
+    --primary-color: #CA2325;
+    /* Sindoor Red */
+    --background-color: #FFF8E1;
+    /* Creamy White */
     --text-color: #888080;
     --dark-accent: #ffffff;
     --card-bg: rgba(104, 96, 96, 0.8);
@@ -26,7 +29,9 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Lora', serif;
     font-weight: 600;
 }
@@ -56,6 +61,7 @@ h1, h2, h3 {
     background-size: cover;
     background-position: center;
 }
+
 /* Artfully chosen images for a layered effect */
 .layer-bg {
     background-image: linear-gradient(rgb(67 67 67), rgba(255, 255, 255, 0)), url('https://wallpapers.com/images/hd/kolkata-durga-puja-pandal-byuor98wtzthvoxa.jpg');
@@ -63,14 +69,16 @@ h1, h2, h3 {
     opacity: 1;
 
 }
+
 .layer-mid {
     /* background-image: url(''); */
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 0;
     opacity: 1;
-    
+
 }
+
 .layer-front {
     /* background-image: url(''); */
     opacity: 1;
@@ -106,13 +114,27 @@ h1, h2, h3 {
     border: 2px solid var(--primary-color);
     border-radius: 50px;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0,0,0, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .cta-button:hover {
-    background-color: transparent;
-    color: var(--primary-color);
-    transform: translateY(-5px);
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 0 10px #CA2325, 0 0 20px #CA2325, 0 0 30px #CA2325, 0 0 40px #CA2325;
+    animation: neonPulse 1.5s infinite alternate;
+
+}
+@keyframes neonPulse {
+    0% {
+        box-shadow: 0 0 10px #CA2325, 0 0 20px #CA2325, 0 0 30px #CA2325, 0 0 40px #CA2325;
+    }
+    50% {
+        box-shadow: 0 0 15px #FF3B3B, 0 0 25px #FF3B3B, 0 0 40px #FF3B3B, 0 0 60px #FF3B3B;
+    }
+    100% {
+        box-shadow: 0 0 10px #CA2325, 0 0 20px #CA2325, 0 0 30px #CA2325, 0 0 40px #CA2325;
+    }
 }
 
 /* --- Content Sections --- */
@@ -145,8 +167,9 @@ h1, h2, h3 {
     margin: 15px auto;
     border-radius: 5px;
 
-    
+
 }
+
 .section-intro {
     font-size: 1.1rem;
     max-width: 800px;
@@ -161,7 +184,7 @@ h1, h2, h3 {
     gap: 30px;
     text-align: left;
 
-    
+
 }
 
 .day-card {
@@ -199,7 +222,7 @@ h1, h2, h3 {
     position: relative;
     overflow: hidden;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     aspect-ratio: 1 / 1;
 }
 
@@ -260,10 +283,21 @@ footer {
 }
 
 /* Add delays for a staggered effect */
-.animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
-.animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
-.animate-on-scroll:nth-child(4) { transition-delay: 0.3s; }
-.animate-on-scroll:nth-child(5) { transition-delay: 0.4s; }
+.animate-on-scroll:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.animate-on-scroll:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.animate-on-scroll:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+.animate-on-scroll:nth-child(5) {
+    transition-delay: 0.4s;
+}
 
 
 /* --- Media Queries for Responsiveness --- */
@@ -271,9 +305,11 @@ footer {
     .hero h1 {
         font-size: 3.5rem;
     }
+
     .hero p {
         font-size: 1.2rem;
     }
+
     .section-title {
         font-size: 2.5rem;
     }
@@ -288,17 +324,19 @@ footer {
 a {
     color: inherit;
     text-decoration: none;
-} 
+}
 
 /* --- Per-Section Fixed Background Images --- */
 
 /* This targets all content sections for the shared styling */
 .content-section {
-    position: relative; /* Needed for stacking context */
+    position: relative;
+    /* Needed for stacking context */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
-    background-attachment: fixed; /* The magic property! */
+    background-attachment: fixed;
+    /* The magic property! */
 }
 
 /* Now, we assign a UNIQUE background image to EACH section.
@@ -307,38 +345,64 @@ a {
 */
 
 #about {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1)), 
-                      url('https://www.shutterstock.com/shutterstock/videos/1106902317/thumb/1.jpg');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1)),
+        url('https://www.shutterstock.com/shutterstock/videos/1106902317/thumb/1.jpg');
 }
 
 #puja-days {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1)), 
-                      url('https://www.shutterstock.com/shutterstock/videos/1106902317/thumb/1.jpg?ip=x480');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1)),
+        url('https://www.shutterstock.com/shutterstock/videos/1106902317/thumb/1.jpg?ip=x480');
 }
 
 #gallery {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1)),  
-                      url('https://www.shutterstock.com/shutterstock/videos/1106902317/thumb/1.jpg');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1)),
+        url('https://www.shutterstock.com/shutterstock/videos/1106902317/thumb/1.jpg');
 }
 
 /* --- Readability Tip --- */
 /* This makes sure the text and cards stand out against the new backgrounds */
 .day-card {
-    background: rgba(255, 255, 255, 0.2); /* Makes cards slightly more opaque */
+    background: rgba(255, 255, 255, 0.2);
+    /* Makes cards slightly more opaque */
 }
 
 /* Add this new CSS block anywhere in your file */
 .content-wrapper {
-    max-width: 1100px; /* This keeps your content centered */
-    margin: 0 auto;    /* This does the centering */
+    max-width: 1100px;
+    /* This keeps your content centered */
+    margin: 0 auto;
+    /* This does the centering */
 }
 
 #darker-text {
     color: #000000;
 }
+
 #darkerer-text {
     color: #302c2c;
     font-size: 24px;
     font-weight: 400;
     font-family: 'Poppins';
+}
+.petal {
+    position: fixed;
+    top: -50px; /* start above viewport */
+    font-size: 18px;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.8;
+    user-select: none;
+    animation-name: fallPetal;
+    animation-timing-function: linear;
+}
+
+@keyframes fallPetal {
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0.3;
+    }
 }

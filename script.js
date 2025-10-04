@@ -72,3 +72,16 @@ const toggleMusic = () => {
 document.addEventListener('dblclick', toggleMusic);
 
 });
+const petalContainer = document.querySelector('.petal-container');
+const petalCount = 50; // Increase for more petals
+
+for (let i = 0; i < petalCount; i++) {
+    const petal = document.createElement('div');
+    petal.classList.add('petal');
+    petal.innerHTML = '🌺'; // Hibiscus emoji
+    petal.style.left = Math.random() * 100 + 'vw';
+    petal.style.fontSize = (14 + Math.random() * 18) + 'px';
+    petal.style.animationDuration = (5 + Math.random() * 10) + 's';
+    petal.style.animationDelay = Math.random() * 5 + 's';
+    petalContainer.appendChild(petal);
+}
