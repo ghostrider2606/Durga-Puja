@@ -377,3 +377,82 @@ a {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
+
+/* Review Section */
+#reviews input, 
+#reviews textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+#reviews button {
+    padding: 10px 25px;
+    background-color: var(--primary-color);
+    color: var(--dark-accent);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#reviews button:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.reviews-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.review-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.review-card h4 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.review-card p {
+    color: var(--text-color);
+}
+/* Navbar */
+.navbar {
+    width: 100%;
+    background-color: rgba(202, 35, 37, 0.9); /* Semi-transparent red */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    padding: 10px 0;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: var(--secondary-color);
+}

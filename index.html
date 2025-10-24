@@ -11,6 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <nav class="navbar">
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#puja-days">Puja Days</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reviews">Blog/Reviews</a></li>
+    </ul>
+</nav>
+
     <audio id="bg-music" src="background.mp3" loop></audio>
     
     <header class="hero">
@@ -90,6 +99,20 @@
                 </div>
             <!-- </div> -->
         </section>
+        <section id="reviews" class="content-section">
+    <h2 class="section-title">Blog & Reviews</h2>
+
+    <div class="review-form animate-on-scroll">
+        <input type="text" id="reviewer-name" placeholder="Your Name">
+        <textarea id="review-text" placeholder="Write your review..."></textarea>
+        <button id="submit-review">Submit Review</button>
+    </div>
+
+    <div class="reviews-container animate-on-scroll">
+        <!-- Reviews will appear here dynamically -->
+    </div>
+</section>
+
     </main>
 
     <footer>

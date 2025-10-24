@@ -84,3 +84,36 @@ toggleButton.addEventListener('click', () => {
         toggleButton.textContent = '🌙 Dark Mode';
     }
 });
+// DOM Elements
+const submitBtn = document.getElementById('submit-review');
+const reviewsContainer = document.querySelector('.reviews-container');
+
+// Load reviews from localStorage
+let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+reviews.forEach(review => addReviewToDOM(review.name, review.text));
+
+// Event Listener
+submitBtn.addEventListener('click', () => {
+    const name = document.getElementById('reviewer-name').value.trim();
+    const text = document.getElementById('review-text').value.trim();
+
+    if(name && text){
+        const review = {name, text};
+        reviews.push(review);
+        localStorage.setItem('reviews', JSON.stringify(reviews));
+        addReviewToDOM(name, text);
+
+        // Clear form
+        document.getElementById('reviewer-name').value = '';
+        document.getElementById('review-text').value = '';
+    } else {
+        alert('Please enter your name and review.');
+    }
+});
+
+function addReviewToDOM(name, text){
+    const card = document.createElement('div');
+    card.classList.add('review-card');
+    card.innerHTML = `<h4>${name}</h4><p>${text}</p>`;
+    reviewsContainer.prepend(card); // Newest on top
+}
