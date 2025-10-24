@@ -1,12 +1,23 @@
-/* --- Global Styles & Variables --- */
+/* Light Mode - Already in :root */
 :root {
-    --secondary-color: #CAA906; /* Festive Gold */
-    --primary-color: #CA2325; /* Sindoor Red */
-    --background-color: #FFF8E1; /* Creamy White */
+    --secondary-color: #CAA906;
+    --primary-color: #CA2325;
+    --background-color: #FFF8E1;
     --text-color: #888080;
     --dark-accent: #ffffff;
     --card-bg: rgba(104, 96, 96, 0.8);
 }
+
+/* Dark Mode */
+.dark-mode {
+    --secondary-color: #FFD700;   /* bright gold */
+    --primary-color: #FF4B5C;     /* deep red */
+    --background-color: #1e1e1e;  /* dark background */
+    --text-color: #f0f0f0;        /* light text */
+    --dark-accent: #1e1e1e;
+    --card-bg: rgba(50, 50, 50, 0.8);
+}
+
 
 * {
     margin: 0;
@@ -341,4 +352,28 @@ a {
     font-size: 24px;
     font-weight: 400;
     font-family: 'Poppins';
+}
+
+
+
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: var(--dark-accent);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 999;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
