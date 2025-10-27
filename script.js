@@ -1,5 +1,43 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // --- Theme Toggle Functionality ---
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = themeToggle.querySelector('.theme-icon');
+    const html = document.documentElement;
+
+    // Function to set theme
+    function setTheme(theme) {
+        html.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        updateThemeIcon(theme);
+    }
+
+    // Function to update theme icon
+    function updateThemeIcon(theme) {
+        if (theme === 'dark') {
+            themeIcon.textContent = '☀️';
+        } else {
+            themeIcon.textContent = '🌙';
+        }
+    }
+
+    // Function to toggle theme
+    function toggleTheme() {
+        const currentTheme = html.getAttribute('data-theme');
+        if (currentTheme === 'dark') {
+            setTheme('light');
+        } else {
+            setTheme('dark');
+        }
+    }
+
+    // Load saved theme preference
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
+
+    // Add event listener to toggle button
+    themeToggle.addEventListener('click', toggleTheme);
+
     // --- Multi-Layer Parallax Effect on Hero Section ---
     const layerBg = document.getElementById('layer-bg');
     const layerMid = document.getElementById('layer-mid');

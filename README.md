@@ -3,6 +3,21 @@ Website for Durga Puja using HTML, CSS and JS with Parallax, Glassmorphism, Poly
 
 ## Watch the Live [Demo](https://ghostrider2606.github.io/Durga-Puja/)
 
+## ✨ Features
+
+- **Parallax Effects**: Multi-layer scrolling effects for immersive experience
+- **Glassmorphism**: Modern glassmorphic card designs
+- **Dark/Light Mode Toggle**: Switch between themes with a single click - your preference is saved!
+- **Animated Sections**: Scroll-triggered animations for engaging transitions
+- **Responsive Design**: Works seamlessly on all devices
+- **Interactive Elements**: Hover effects, smooth transitions, and interactive gallery
+- **Background Music**: Double-click anywhere to toggle festive Dhaak music
+- **Fixed Background Images**: Parallax scrolling with fixed attachment
+
+## 🌙 Dark Mode
+
+The website now includes a beautiful dark mode! Click the moon/sun icon in the top-right corner to switch themes. Your preference is automatically saved using localStorage.
+
 
 # 💥 How to Contribute
 
